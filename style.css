@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Licorice&family=Nunito+Sans:wght@300;400;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Vujahday+Script&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  color: #e1eaf2;
+  font-weight: 600;
+  font-family: Poppins;
+}
+.bg-color {
+  /* ff 3.6+ */
+  background: -moz-linear-gradient(
+    69deg,
+    rgba(238, 130, 238, 1) 16%,
+    rgba(238, 130, 238, 1) 18%,
+    rgba(238, 130, 238, 1) 24%,
+    rgba(0, 209, 255, 1) 100%
+  );
+
+  /* safari 5.1+,chrome 10+ */
+  background: -webkit-linear-gradient(
+    69deg,
+    rgba(238, 130, 238, 1) 16%,
+    rgba(238, 130, 238, 1) 18%,
+    rgba(238, 130, 238, 1) 24%,
+    rgba(0, 209, 255, 1) 100%
+  );
+
+  /* opera 11.10+ */
+  background: -o-linear-gradient(
+    69deg,
+    rgba(238, 130, 238, 1) 16%,
+    rgba(238, 130, 238, 1) 18%,
+    rgba(238, 130, 238, 1) 24%,
+    rgba(0, 209, 255, 1) 100%
+  );
+
+  /* ie 6-9 */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00D1FF', endColorstr='#EE82EE', GradientType=0 );
+
+  /* ie 10+ */
+  background: -ms-linear-gradient(
+    69deg,
+    rgba(238, 130, 238, 1) 16%,
+    rgba(238, 130, 238, 1) 18%,
+    rgba(238, 130, 238, 1) 24%,
+    rgba(0, 209, 255, 1) 100%
+  );
+
+  /* global 94%+ browsers support */
+  background: linear-gradient(
+    69deg,
+    rgba(238, 130, 238, 1) 16%,
+    rgba(238, 130, 238, 1) 18%,
+    rgba(238, 130, 238, 1) 24%,
+    rgba(0, 209, 255, 1) 100%
+  );
+}
+.container {
+  max-width: 500px;
+  height: 500px;
+  width: 100%;
+  margin: 30px 0;
+  background: #3c424a;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: block;
+  overflow: hidden;
+}
+.todo-header_date {
+  border-bottom: 1px solid #000;
+}
+.todo-header_date-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.todo-header_date-list li {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  transition: border-bottom 0.3s ease-in-out;
+}
+.todo-header_date-list li:hover {
+  border-bottom: 2px solid #f06292;
+}
+
+.todo-header_date-list li p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.todo-header_date-list .todo-header_date-item.underline {
+  border-bottom: 2px solid #f06292;
+}
+
+.todo-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 30px 0;
+  width: 100%;
+  position: relative;
+}
+.todo-heading h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  line-height: 1.3;
+  color: #ccc;
+}
+.todo-heading p {
+  color: #5c626b;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+.todo-heading_btn {
+  position: absolute;
+  top: 35%;
+  font-size: 20px;
+
+  cursor: pointer;
+}
+.todo-heading_btn-arrow-right {
+  position: absolute;
+  left: 100px;
+}
+.todo-heading_btn-arrow-left {
+  position: absolute;
+  right: 100px;
+}
+.todo-new-task-form {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  /* background: #343a40; */
+}
+#todo-new-task-input {
+  background: #343a40;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 13px;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  border-radius: 5px 0 0 5px;
+}
+#todo-new-task-submit {
+  flex: 0.3;
+  padding: 13px;
+  outline: none;
+  border: none;
+  font-size: 15px;
+
+  border-radius: 0 5px 5px 0;
+  color: #3c424a;
+  cursor: pointer;
+}
+#todo-new-task-submit:hover {
+  opacity: 0.9;
+}
+
+.todo-task-list {
+  padding: 20px;
+}
+
+#tasks {
+  max-height: 250px;
+  overflow-y: scroll;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#tasks::-webkit-scrollbar {
+  width: 0;
+}
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 10px;
+  width: 100%;
+}
+.content {
+  flex: 1;
+}
+
+.text {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #fff;
+  background: #343a40;
+  margin: 0;
+  font-size: 14px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.actions {
+  flex: 0.4;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.edit {
+  flex: 1;
+  padding: 9px;
+  border: none;
+  outline: none;
+  margin: 1px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.delete {
+  flex: 1;
+  padding: 9px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  cursor: pointer;
+}
+.edit:hover,
+.delete:hover {
+  opacity: 0.9;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <title>TODO-APP</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-color">
+    <div class="container">
+      <header>
+        <div class="todo-header" id="#todo-header">
+          <div class="todo-header_date">
+            <ul class="todo-header_date-list">
+              <li class="todo-header_date-item underline">
+                <p>Day</p>
+              </li>
+              <li class="todo-header_date-item"><p>Week</p></li>
+              <li class="todo-header_date-item"><p>Month</p></li>
+              <li class="todo-header_date-item"><p>Year</p></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="todo-heading">
+          <h2>Sunday</h2>
+          <p>Jan 2, 2022</p>
+          <div class="todo-heading_btn">
+            <span class="todo-heading_btn-arrow-left">
+              <i class="fas fa-chevron-left"></i>
+            </span>
+
+            <span class="todo-heading_btn-arrow-right">
+              <i class="fas fa-chevron-right"></i>
+            </span>
+          </div>
+        </section>
+        <section>
+          <form class="todo-new-task-form">
+            <input
+              type="text"
+              id="todo-new-task-input"
+              placeholder="What is your planned?"
+              name="input"
+            />
+            <input type="submit" value="Add Task" id="todo-new-task-submit" />
+          </form>
+        </section>
+        <section class="todo-task-list">
+          <div id="tasks">
+            <!-- <div class="task">
+              <div class="content">
+                <input
+                  type="text"
+                  class="text"
+                  value="Chieu nay di da banh"
+                  readonly
+                  autocomplete="off"
+                />
+              </div>
+              <div class="actions">
+                <button class="edit">Edit</button>
+                <button class="delete">Delete</button>
+              </div>
+            </div> -->
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
